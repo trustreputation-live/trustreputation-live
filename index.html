@@ -1,228 +1,742 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Understanding Trustpilot's Review Invitation Subscription</title>
+  <title>Trustpilot Invitation Services: The Complete UK Business Guide 2026 | TrustReputation</title>
+  <meta name="description" content="Learn how Trustpilot invitation services work for UK businesses. AFS setup, API invitations, manual methods and expert strategy from TrustReputation.live.">
+  <meta name="keywords" content="Trustpilot invitation services, Trustpilot AFS, automatic feedback service, get more Trustpilot reviews, UK business reviews, verified Trustpilot reviews">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #ffffff;
-      --text: #1f2933;
-    --muted: #5f6b7a;
-    --accent: #00b67a;
-    --border: #e4e7eb;
-      }
-  * { box-sizing: border-box; }
-  body {
-        margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-}
-  header.site {
-    border-bottom: 1px solid var(--border);
-    padding: 1.25rem 1.5rem;
-  }
-  header.site .label {
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  main {
-        max-width: 720px;
-    margin: 0 auto;
-    padding: 2.5rem 1.5rem 4rem;
-}
-  .kicker {
-        color: var(--accent);
-    font-weight: 600;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.75rem;
-}
-  h1 {
-        font-size: 2.1rem;
-    line-height: 1.25;
-    margin: 0 0 0.75rem;
-}
-  .meta {
-        color: var(--muted);
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 1.5rem;
-  }
-  h2 {
-        font-size: 1.3rem;
-    margin-top: 2.25rem;
-}
-  p { margin: 1rem 0; }
-  ul { padding-left: 1.25rem; }
-  li { margin: 0.4rem 0; }
-  table {
-        width: 100%;
-    border-collapse: collapse;
-    margin: 1.25rem 0;
-    font-size: 0.95rem;
-}
-  th, td {
-        text-align: left;
-    padding: 0.6rem 0.75rem;
-    border: 1px solid var(--border);
-}
-  th { background: #f8fafb; }
-      .callout {
-        background: #f4fbf8;
-            border-left: 3px solid var(--accent);
-    padding: 1rem 1.25rem;
-    border-radius: 4px;
-    margin: 1.5rem 0;
-    font-size: 0.95rem;
-  }
-  .disclaimer {
-        margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.85rem;
-}
-  footer {
-        text-align: center;
-    color: var(--muted);
-    font-size: 0.85rem;
-    padding: 2rem 1rem;
-}
-</style>
-  </head>
-  <body>
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --accent: #00695c;
+      --accent-light: #e0f2f1;
+      --accent-mid: #004d40;
+      --border: #e5e7eb;
+      --highlight: #f0fdf4;
+      --tag-bg: #ecfdf5;
+      --tag-text: #065f46;
+    }
 
-  <header class="site">
-    <div class="label">Sample Article &middot; Educational Explainer</div>
-</header>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<main>
-  <article>
-    <div class="kicker">Online Reputation &amp; Reviews</div>
-      <h1>Understanding Trustpilot's Review Invitation Subscription</h1>
-      <div class="meta">Published August 21, 2026 &middot; 6 min read</div>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
 
-      <p>
-        For any business that sells online, customer reviews have become one of the
-      strongest signals of trust a shopper looks for before making a purchase.
-      Trustpilot, one of the most widely used review platforms, has built an entire
-      feature set around helping businesses collect those reviews systematically
-      rather than hoping customers leave feedback on their own. That feature is
-      called <strong>review invitations</strong>, and it is delivered through
-      Trustpilot's paid business subscription plans. This article explains what the
-        invitation system is, how it works, and what businesses get at each
-      subscription tier.
-      </p>
+    /* ── HEADER ── */
+    header {
+      background: var(--accent-mid);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
 
-      <h2>What is a Trustpilot review invitation?</h2>
-      <p>
-        A review invitation is an automated request, usually sent by email, asking a
-      customer to rate a recent purchase or experience. Instead of relying on
-      customers to visit a company's Trustpilot profile unprompted, the business
-        triggers an invitation shortly after an order or interaction is completed.
-        This turns review collection into a predictable, ongoing process rather than
-      a one-off effort.
-      </p>
+    header .logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
 
-      <h2>How the invitation system works</h2>
-    <p>Trustpilot offers a few different ways to send these invitations:</p>
-      <ul>
-        <li>
-          <strong>Automatic invitations</strong> &mdash; connected through an
-        e-commerce or CRM integration (such as Shopify, WooCommerce, HubSpot, or
-        Salesforce) so that an invitation goes out automatically after a purchase
-        or ticket is closed.
-        </li>
-      <li>
-        <strong>Invitation links or API-based invitations</strong> &mdash; a
-        generated link a business can insert into its own transactional emails,
-        useful for companies with a custom checkout or email system.
-        </li>
-        <li>
-          <strong>Customizable templates</strong> &mdash; invitation emails can be
-        translated and styled to match the company's branding, available in
-          multiple languages.
-        </li>
-        <li>
-          <strong>Reminder emails</strong> &mdash; a follow-up sent to customers who
-        haven't responded to the first invitation, which Trustpilot reports can
-          meaningfully increase response rates.
-        </li>
-      </ul>
+    header .logo span {
+      color: #80cbc4;
+    }
 
-      <div class="callout">
-        The number of invitations a business can send each month, and whether
-      reminder emails and an in-app review collector are included, depends on
-      which subscription plan the business is on.
+    header nav a {
+      color: #b2dfdb;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+
+    header nav a:hover { color: #ffffff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, var(--accent-mid) 0%, var(--accent) 60%, #26a69a 100%);
+      color: white;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .hero-inner { position: relative; max-width: 760px; margin: 0 auto; }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #b2dfdb;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.9rem);
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 580px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: #ffffff;
+      color: var(--accent-mid);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .hero-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    /* ── META BAR ── */
+    .meta-bar {
+      background: var(--highlight);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-bar span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .meta-bar span strong { color: var(--text); }
+
+    /* ── MAIN LAYOUT ── */
+    .wrapper {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 5rem;
+    }
+
+    /* ── INTRO ── */
+    .intro-lead {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.25rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2.5rem 0;
+    }
+
+    .stat-card {
+      background: var(--highlight);
+      border: 1px solid #c6f6d5;
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .stat-card .number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .stat-card .label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    /* ── BODY TYPOGRAPHY ── */
+    h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 3rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    h2:first-of-type { border-top: none; }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent-mid);
+      margin: 2rem 0 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin-bottom: 1.25rem; color: #374151; }
+
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--accent-mid); }
+
+    /* ── METHOD CARDS ── */
+    .method-grid {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .method-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.5rem;
+      background: #fafafa;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .method-card:hover { box-shadow: 0 4px 16px rgba(0,105,92,0.08); }
+
+    .method-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .method-card h3 { margin: 0 0 0.35rem; font-size: 0.95rem; }
+    .method-card p { margin: 0; font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.15rem 0.6rem;
+      border-radius: 4px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* ── STEPS ── */
+    .steps {
+      counter-reset: steps;
+      margin: 1.5rem 0 2rem;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .step {
+      counter-increment: steps;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    .step::before {
+      content: counter(steps);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      background: var(--accent);
+      min-width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step p { margin: 0; font-size: 0.875rem; color: #374151; }
+    .step strong { color: var(--text); display: block; margin-bottom: 0.2rem; }
+
+    /* ── CALLOUT BOX ── */
+    .callout {
+      background: var(--highlight);
+      border: 1px solid #a7f3d0;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .callout .callout-title {
+      font-weight: 700;
+      color: var(--accent-mid);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .callout p { margin: 0; font-size: 0.9rem; color: #065f46; }
+
+    /* ── WARNING BOX ── */
+    .warning {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-left: 4px solid #f97316;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning .callout-title { color: #c2410c; }
+    .warning p { color: #7c2d12; font-size: 0.9rem; margin: 0; }
+
+    /* ── BEST PRACTICES ── */
+    .practices {
+      display: grid;
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .practice-item {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+      padding: 0.9rem 1.1rem;
+      background: #f9fafb;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .check {
+      color: var(--accent);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .practice-item p { margin: 0; font-size: 0.875rem; color: #374151; }
+    .practice-item strong { color: var(--text); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, var(--accent-mid), var(--accent));
+      color: white;
+      border-radius: 14px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      margin: 3.5rem 0 0;
+    }
+
+    .cta-section h2 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.6rem;
+      color: white;
+      border: none;
+      padding: 0;
+      margin: 0 0 0.75rem;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.82);
+      max-width: 480px;
+      margin: 0 auto 1.75rem;
+      font-size: 0.95rem;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: white;
+      color: var(--accent-mid);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.85rem 2.25rem;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+      transition: transform 0.15s;
+    }
+
+    .cta-btn:hover { transform: translateY(-2px); color: var(--accent-mid); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #f3f4f6;
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer p { font-size: 0.8rem; color: var(--muted); margin: 0; }
+    footer a { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .stat-row { grid-template-columns: 1fr; }
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .wrapper { padding: 2.5rem 1.25rem 4rem; }
+      header nav { display: none; }
+      .cta-section { padding: 2rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="https://trustreputation.live" class="logo">Trust<span>Reputation</span>.live</a>
+    <nav>
+      <a href="https://trustreputation.live">Home</a>
+      <a href="https://trustreputation.live/#services">Services</a>
+      <a href="https://trustreputation.live/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">UK Business Guide · 2026</div>
+      <h1>Trustpilot Invitation Services: How to Get More Verified Reviews the Right Way</h1>
+      <p>A practical, no-fluff guide to every legitimate Trustpilot invitation method — from AFS setup to API integrations — for UK businesses ready to build real trust.</p>
+      <a href="https://trustreputation.live" class="hero-cta">Get Expert Help at TrustReputation.live →</a>
+    </div>
+  </section>
+
+  <!-- META BAR -->
+  <div class="meta-bar">
+    <span>✍️ <strong>Published by</strong> TrustReputation.live</span>
+    <span>📅 <strong>Updated:</strong> August 2026</span>
+    <span>⏱️ <strong>Read time:</strong> 8 minutes</span>
+    <span>🏷️ <strong>Topic:</strong> Review Strategy</span>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <main class="wrapper">
+
+    <p class="intro-lead">Most UK businesses know they need Trustpilot reviews. Far fewer know how the invitation system actually works — or how much they're leaving on the table by not using it properly.</p>
+
+    <p>Whether you run an e-commerce store, a service business, or a SaaS platform, your Trustpilot profile is often the first thing a potential customer checks before spending money with you. A steady stream of genuine, verified reviews doesn't happen by accident. It happens because you have a system — and that system is called an invitation service.</p>
+
+    <p>This guide breaks down every official Trustpilot invitation method, how to set them up, and how to use them in a way that grows your profile legitimately and sustainably. If you'd rather have an expert handle the setup for you, <a href="https://trustreputation.live" target="_blank" rel="noopener">TrustReputation.live</a> works with UK businesses to do exactly that.</p>
+
+    <!-- STATS -->
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="number">93%</div>
+        <div class="label">of consumers read reviews before buying online</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">35%</div>
+        <div class="label">more reviews collected when reminder emails are used</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">4×</div>
+        <div class="label">more likely to convert with 50+ verified reviews</div>
+      </div>
     </div>
 
-    <h2>Subscription tiers and invitation limits</h2>
-    <p>
-      Trustpilot's business plans scale primarily around how many automated
-      invitations can be sent per month:
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Plan</th>
-          <th>Automated invitations</th>
-          <th>Positioning</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Free</td><td>50 / month</td><td>Basic profile &amp; manual collection</td></tr>
-        <tr><td>Starter</td><td>100 / month</td><td>Start growing trust</td></tr>
-        <tr><td>Plus</td><td>300 / month</td><td>Turn trust into demand</td></tr>
-        <tr><td>Premium</td><td>1,000 / month</td><td>Feedback as a competitive edge</td></tr>
-        <tr><td>Enterprise</td><td>Unlimited</td><td>Insight-driven business strategy</td></tr>
-      </tbody>
-    </table>
-    <p>
-      From the Plus tier upward, plans also add an in-app review collector with
-      its own monthly click allowance, giving businesses an additional channel for
-      gathering feedback beyond email invitations.
-    </p>
+    <!-- WHAT ARE INVITATION SERVICES -->
+    <h2>What Are Trustpilot Invitation Services?</h2>
 
-    <h2>Why businesses subscribe to it</h2>
-    <p>
-      A steady stream of recent, genuine reviews does two things for a business:
-      it builds trust with prospective customers browsing the company's profile,
-        and it gives the company structured feedback it can act on. Because
-        review volume tends to correlate with buyer confidence, many businesses
-      treat the invitation subscription as a growth and reputation-management
-        tool rather than just a customer-service add-on.
-      </p>
+    <p>Trustpilot invitation services are the mechanisms that allow businesses to systematically ask their customers to leave a review after a purchase or service experience. Rather than hoping reviews appear organically, these tools automate — or at least streamline — the process of reaching customers at the right moment.</p>
 
-      <h2>Things to keep in mind</h2>
-    <p>
-      Review platforms generally require that invitations only be sent to real
-      customers who actually completed a transaction, and that businesses not
-      selectively invite only satisfied customers while excluding dissatisfied
-      ones. Following these guidelines keeps the review profile authentic and
-      compliant with the platform's terms of service.
-      </p>
+    <p>Trustpilot permits all businesses to invite customers, free of charge, provided the invitations go out in a fair and neutral way. The platform's rules are clear: you must invite all customers, not just the ones you think will say something nice. Cherry-picking is against the guidelines and can get your account flagged.</p>
 
-      <p class="disclaimer">
-        This page is an independent, educational explainer written for illustration
-      purposes and is not affiliated with, endorsed by, or published on behalf of
-      Trustpilot. Plan names, invitation limits, and features are based on
-      publicly available information and may change &mdash; check Trustpilot's own
-        site for current pricing and feature details.
-      </p>
-    </article>
+    <div class="callout">
+      <div class="callout-title">💡 Key Principle</div>
+      <p>Invitation services are about making it easy for your real customers to share their genuine experience. Volume comes from consistency — not from shortcuts. The businesses with the strongest Trustpilot profiles simply make review requests a standard part of their post-purchase process.</p>
+    </div>
+
+    <!-- THE METHODS -->
+    <h2>The Four Core Trustpilot Invitation Methods</h2>
+
+    <p>Trustpilot offers a range of invitation options — from fully automated to entirely manual. Here's a clear breakdown of each.</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <div class="method-icon">⚙️</div>
+        <div>
+          <h3>Automatic Feedback Service (AFS) <span class="badge">Most Popular</span></h3>
+          <p>You BCC a unique Trustpilot email address into your transactional emails. Trustpilot reads the customer data and automatically queues a review invitation a few days after purchase. No developer required.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">🔌</div>
+        <div>
+          <h3>Platform Integrations <span class="badge">Easy Setup</span></h3>
+          <p>Plug-and-play connectors for Shopify, WooCommerce, Magento, BigCommerce, Salesforce, and more. Invitations fire automatically based on order events — ideal for e-commerce businesses.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">🧑‍💻</div>
+        <div>
+          <h3>API Invitations <span class="badge">Advanced</span></h3>
+          <p>A direct server-to-server connection that gives developers full control over when, how, and to whom invitations are sent. Supports both service and product review flows simultaneously.</p>
+        </div>
+      </div>
+      <div class="method-card">
+        <div class="method-icon">📋</div>
+        <div>
+          <h3>Manual Invitations <span class="badge">Free Tier</span></h3>
+          <p>Upload a CSV of customer data or copy-paste contacts directly into Trustpilot. Reviews collected this way are labelled "Invited" rather than "Verified" — but it's a solid starting point.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AFS DEEP DIVE -->
+    <h2>Setting Up Automatic Feedback Service (AFS) Step by Step</h2>
+
+    <p>AFS is the most widely used invitation method for a reason: it takes about ten minutes to configure, it's included in Trustpilot's free plan, and once it's running, it works in the background without any manual effort. Here's how to get it live.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div>
+          <strong>Log into Trustpilot Business and navigate to invitations</strong>
+          <p>Go to Get Reviews → Invitation Methods → Trustpilot Automatic Invitations (AFS). You'll find your unique BCC email address here — something like <code>52bxxxx93e@invite.trustpilot.com</code>. Copy it carefully.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Add the BCC address to your transactional emails</strong>
+          <p>In your email platform, add this address as a BCC on your order confirmation or shipping notification emails. Trustpilot recommends triggering from the shipping or delivery email rather than the order confirmation — customers who haven't received their order yet can't leave a meaningful review.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Add the structured data snippet (optional but recommended)</strong>
+          <p>If you want the invitation to include the customer's name, order reference, or specific products, add Trustpilot's JSON structured data snippet to your email template. AFS can pull basic data from the subject line and "To" field without it, but the snippet improves personalisation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Set your invitation delay</strong>
+          <p>Trustpilot defaults to sending the review request 7 days after receiving your BCC. For most service businesses, this is fine. For physical product deliveries, consider extending to 10–14 days to ensure the parcel has arrived before the customer is asked to review.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Enable reminder emails</strong>
+          <p>Inside Trustpilot Business, switch on reminder emails. These are a single, friendly follow-up to customers who received the first invitation but didn't respond. On average, reminders generate 35% additional reviews at no extra effort.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <strong>Verify using the invitation history log</strong>
+          <p>Check your invitation history in Trustpilot Business a few days after setup. You should start seeing invitations queued and sent. If nothing appears, your email client may be stripping the BCC field — check your email system's settings or consult your ESP's documentation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PLATFORM INTEGRATIONS -->
+    <h2>Using Platform Integrations for E-Commerce</h2>
+
+    <p>If your business runs on Shopify, WooCommerce, Magento, or another major e-commerce platform, you may not need to touch the AFS BCC approach at all. Trustpilot has built native integrations for these platforms that handle the entire invitation flow automatically.</p>
+
+    <p>These integrations connect your order management system directly to Trustpilot. When an order is marked as delivered or completed, the integration triggers a review invitation — no BCC required, no manual steps. For businesses processing large volumes of orders, this is almost always the cleanest setup.</p>
+
+    <p>Find these under Get Reviews → App Directory in your Trustpilot Business account. Most integrations require a paid Trustpilot subscription and webhook access, so check your plan before starting.</p>
+
+    <!-- MULTI-TOUCHPOINT STRATEGY -->
+    <h2>Collecting Reviews Across the Entire Customer Journey</h2>
+
+    <p>Most businesses treat review invitations as a single post-purchase event. The smarter approach is to think across the full customer journey and identify the right moments for different types of feedback.</p>
+
+    <p>AFS supports multiple trigger points. You can configure separate invitation flows for:</p>
+
+    <div class="practices">
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Post-purchase</strong> — service review immediately after the transaction is confirmed</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Post-delivery</strong> — product review once shipping is confirmed as delivered</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Post-support</strong> — service review after a customer care ticket is resolved</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Service completion</strong> — for trades, consultancies, or subscription renewals</p>
+      </div>
+    </div>
+
+    <p>Each of these touchpoints gives customers the chance to leave feedback that is genuinely relevant to that part of their experience. This also gives your profile a more rounded, authentic look — a mix of review types at different stages, rather than a wall of near-identical post-checkout comments.</p>
+
+    <!-- INVITATION TEMPLATES -->
+    <h2>Invitation Templates, Branding, and Reminder Timing</h2>
+
+    <p>The email your customer receives matters. A badly timed, generic invitation gets ignored. A well-crafted, on-brand message from a business they recognise gets clicked.</p>
+
+    <p>Trustpilot's built-in invitation templates are available in 16 languages and can be customised with your logo, brand colours, and tone of voice. If you use a paid plan, you can also create custom templates from scratch and A/B test them against each other.</p>
+
+    <h3>What makes a good review invitation?</h3>
+
+    <div class="practices">
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Use the customer's first name</strong> — personalisation increases open and click rates meaningfully</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Reference the specific order or service</strong> — it anchors the request in a real experience</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Keep the copy neutral</strong> — never ask for a "positive" or "great" review; ask for an honest one</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Send from a recognisable sender name</strong> — your brand name, not "noreply@" addresses that feel like spam</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>One clear call-to-action</strong> — a single "Leave a review" button, nothing competing with it</p>
+      </div>
+    </div>
+
+    <!-- BEST PRACTICES -->
+    <h2>Best Practices for Staying Compliant With Trustpilot's Guidelines</h2>
+
+    <p>Trustpilot has significantly tightened its platform rules over the past few years. Businesses that bend — or break — the invitation rules face profile penalties, review removal, or outright suspension. None of those outcomes are worth the short-term gain.</p>
+
+    <div class="warning">
+      <div class="callout-title">⚠️ Common Mistakes to Avoid</div>
+      <p>Don't send invitations only to customers you expect will leave positive feedback. Don't offer incentives (discounts, gifts, loyalty points) in exchange for reviews. Don't use third-party services that generate fake or fabricated reviews. Trustpilot's fraud detection systems are sophisticated and improving constantly — and the consequences of being caught are severe.</p>
+    </div>
+
+    <p>The most sustainable strategy is also the simplest: invite every customer, at the right time, with a neutral message. Let the volume of genuine feedback do the work. Businesses with 200 honest reviews — some three-star, some five-star — appear far more credible to consumers than profiles with 50 uniform five-star comments.</p>
+
+    <!-- PAST CUSTOMERS -->
+    <h2>Getting Your First Reviews: The Bulk Invitation Strategy</h2>
+
+    <p>If you're just setting up your Trustpilot profile, you may feel like you're starting from nothing. Trustpilot has a solution for this: bulk historical invitations allow you to contact customers from the past 90 days and ask them to review experiences they've already had.</p>
+
+    <p>This is a one-time mechanism — you can't repeatedly re-import the same customers — but it's a legitimate and effective way to seed your profile before your AFS automation kicks in. Upload a CSV of recent customers, send the invitations, and let the responses come in over the following days.</p>
+
+    <div class="callout">
+      <div class="callout-title">💡 Pro Tip</div>
+      <p>Run your bulk historical invite the same week you complete your AFS setup. That way, you get an initial volume boost from past customers while your automated system begins collecting reviews from new ones simultaneously.</p>
+    </div>
+
+    <!-- AI AND SEARCH -->
+    <h2>Why Trustpilot Reviews Now Matter for AI Search Too</h2>
+
+    <p>The conversation around Trustpilot reviews used to be almost entirely about Google Search visibility and consumer trust on the platform itself. That's still true — but there's a newer reason to prioritise your review volume: AI-powered search.</p>
+
+    <p>Search engines powered by AI, including Google's AI Overviews and other generative search tools, are increasingly pulling third-party review data into their responses when users ask questions like "is [company] reliable?" or "best [service] in the UK." A well-populated Trustpilot profile — with recent, varied, verified reviews — signals credibility to these systems in a way that self-published website content simply cannot.</p>
+
+    <p>Fresh reviews matter here more than old ones. A profile with 40 reviews from 2022 and nothing since reads as dormant. Automated invitation services keep your profile active and current, which is exactly what both human readers and AI engines are looking for.</p>
+
+    <!-- HOW TRUSTREPUTATION HELPS -->
+    <h2>How TrustReputation.live Helps UK Businesses</h2>
+
+    <p>Setting up AFS correctly, building compliant invitation templates, timing your touchpoints, and staying on top of Trustpilot's evolving guidelines takes time — and gets missed when you're running a business. That's where <a href="https://trustreputation.live" target="_blank" rel="noopener">TrustReputation.live</a> comes in.</p>
+
+    <p>We work exclusively with UK businesses to build and manage legitimate Trustpilot invitation strategies. Our services include:</p>
+
+    <div class="practices">
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>AFS configuration and testing</strong> — full setup, including structured data snippets and delay optimisation</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Custom invitation template design</strong> — on-brand email copy that complies with Trustpilot's guidelines and gets opened</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Platform integration support</strong> — connecting Shopify, WooCommerce, and other platforms to your Trustpilot account</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Multi-touchpoint strategy</strong> — mapping the right invitation moment to each stage of your customer journey</p>
+      </div>
+      <div class="practice-item">
+        <span class="check">✓</span>
+        <p><strong>Ongoing review monitoring</strong> — tracking your profile health, flagging issues, and keeping your setup current</p>
+      </div>
+    </div>
+
+    <p>Every service we offer is built around Trustpilot's official guidelines. We don't do fake reviews, purchased reviews, or anything that puts your account at risk. Our focus is on helping your real customers find it easier to share their real experiences.</p>
+
+    <!-- CTA -->
+    <div class="cta-section">
+      <h2>Ready to Build a Trustpilot Profile That Converts?</h2>
+      <p>Talk to TrustReputation.live about setting up a compliant, effective Trustpilot invitation service for your UK business — no shortcuts, no risk, no guesswork.</p>
+      <a href="https://trustreputation.live" class="cta-btn" target="_blank" rel="noopener">Visit TrustReputation.live →</a>
+    </div>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    Sample article page &middot; generated for demonstration purposes
-</footer>
+    <p>© 2026 <a href="https://trustreputation.live" target="_blank" rel="noopener">TrustReputation.live</a> · Online Reputation Management for UK Businesses · All rights reserved.</p>
+    <p style="margin-top:0.5rem;">This article is for informational purposes. All strategies described comply with Trustpilot's official guidelines.</p>
+  </footer>
 
-  </body>
-  </html>
-  
+</body>
+</html>
